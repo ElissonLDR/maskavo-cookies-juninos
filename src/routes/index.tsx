@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Receitas temáticas para transformar o São João em oportunidade de venda. 3x de R$9,64 ou R$27,00 à vista.",
+          "Receitas temáticas para transformar o São João em oportunidade de venda. 2 x de R$ 10,47 ou R$19,90 à vista.",
       },
       { property: "og:type", content: "website" },
     ],
