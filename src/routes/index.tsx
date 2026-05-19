@@ -136,7 +136,7 @@ function Index() {
                     <CTA>Garantir meu acesso</CTA>
                   </div>
                   <p className="mt-3 text-xs text-[var(--muted-foreground)] text-center">
-                    🔒 Pagamento seguro • Acesso imediato
+                    🔒 Pagamento seguro • AULA AO VIVO
                   </p>
                 </div>
               </div>
@@ -399,7 +399,7 @@ function Index() {
             <div className="mt-7">
               <CTA large>Garantir meu acesso ao evento</CTA>
             </div>
-            <p className="mt-4 text-sm text-[var(--muted-foreground)] text-center">🔒 Pagamento seguro • Acesso imediato</p>
+            <p className="mt-4 text-sm text-[var(--muted-foreground)] text-center">🔒 Pagamento seguro • AULA AO VIVO</p>
           </div>
         </div>
       </section>
