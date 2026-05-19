@@ -56,7 +56,7 @@ function Index() {
       <section
         className="relative w-full min-h-[90vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(36,16,10,0.55), rgba(36,16,10,0.35)), url(${bgHero})`,
+          backgroundImage: `url(${bgHero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
