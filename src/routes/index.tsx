@@ -292,7 +292,7 @@ function Index() {
             ].map((c) => (
               <div
                 key={c.title}
-                className="premium-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
+                className="premium-card p-7"
                 style={{ borderRadius: 32 }}
               >
                 <div
