@@ -171,7 +171,7 @@ function Index() {
                   <img
                     src={c.img}
                     alt={c.title}
-                    className="w-full h-72 md:h-80 object-cover blob-shape-2 transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-7 md:p-8">
