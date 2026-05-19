@@ -30,15 +30,16 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CTA = ({ children = "Garantir meu acesso ao evento", large = false }: { children?: React.ReactNode; large?: boolean }) => (
+const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
     href="#oferta"
-    className="btn-cta w-full text-center"
-    style={large ? { fontSize: "1.0625rem", padding: "1.25rem 1.5rem" } : { fontSize: "0.95rem", padding: "1rem 1.25rem" }}
+    className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
+    style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
     <span>{children}</span>
   </a>
 );
+
 
 
 function Index() {
