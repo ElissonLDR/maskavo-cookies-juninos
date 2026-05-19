@@ -375,14 +375,14 @@ function Index() {
           {/* Texto esquerda */}
           <div className="flex-1 min-w-0 text-center md:text-left">
             <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap" style={{ fontSize: "clamp(1rem, 4.8vw, 3.75rem)" }}>
+            <h2 className="mt-5 font-extrabold text-[var(--brown-deep)] leading-tight" style={{ fontSize: "clamp(1.25rem, 3.5vw, 3.75rem)" }}>
               Acesso completo ao <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
             </h2>
           </div>
 
           {/* Box de valores direita */}
           <div
-            className="w-full md:w-auto md:flex-shrink-0 md:max-w-sm p-8 md:p-10 bg-white"
+            className="w-full md:w-auto md:flex-shrink-0 md:max-w-sm p-8 md:p-10 bg-white text-center md:text-left"
             style={{ borderRadius: 40, boxShadow: "0 30px 60px -15px rgba(0,0,0,0.4)" }}
           >
             <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">💰 INVESTIMENTO</p>
