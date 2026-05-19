@@ -57,12 +57,12 @@ function Index() {
         <div className="absolute inset-0 hidden md:block" style={{ backgroundImage: `url(${bgHero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         {/* background mobile */}
         <div className="absolute inset-0 block md:hidden" style={{ backgroundImage: `url(${bgHeroMobile})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-        <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Texto */}
           <div className="text-[var(--brown-deep)] text-center md:text-left">
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
-            <h1 className="mt-6 font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
+            <h1 className="mt-6 font-extrabold leading-[0.95] whitespace-nowrap" style={{ fontSize: "clamp(2.5rem, 12vw, 4.5rem)" }}>
               Cookies <span style={{ color: "var(--orange-deep)" }}>Juninos</span>
             </h1>
 
@@ -376,7 +376,7 @@ function Index() {
           {/* Texto esquerda */}
           <div className="flex-1 text-center md:text-left">
             <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap">
+            <h2 className="mt-5 font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap" style={{ fontSize: "clamp(1.5rem, 5.5vw, 3.75rem)" }}>
               Acesso completo ao <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
             </h2>
           </div>
