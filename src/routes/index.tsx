@@ -381,13 +381,14 @@ function Index() {
       {/* OFERTA FINAL */}
       <section
         id="oferta"
-        className="relative py-24 md:py-32 px-6 mt-8"
+        className="relative py-16 md:py-24 px-6"
         style={{
-          backgroundImage: `linear-gradient(rgba(36,16,10,0.55), rgba(36,16,10,0.55)), url(${bgFinal})`,
+          backgroundImage: `url(${bgFinal})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
+
         <div className="max-w-3xl mx-auto text-center">
           <span className="tag-chip">🌽 OFERTA FINAL</span>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight">
