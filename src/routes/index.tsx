@@ -48,7 +48,9 @@ function Index() {
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-center">
-        <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-12 md:h-14 md:bg-transparent md:px-0 md:py-0 md:rounded-none md:backdrop-blur-none bg-white/70 px-5 py-2.5 rounded-full backdrop-blur-sm" />
+        <div className="md:bg-transparent md:px-0 md:py-0 md:rounded-none md:backdrop-blur-none bg-white/70 px-5 py-2.5 rounded-full backdrop-blur-sm inline-flex items-center">
+          <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-12 md:h-14" />
+        </div>
       </header>
 
       {/* HERO */}
