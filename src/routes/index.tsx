@@ -32,7 +32,9 @@ export const Route = createFileRoute("/")({
 
 const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
-    href="#oferta"
+    href="https://pay.hotmart.com/L105848987O?off=pincvacy"
+    target="_blank"
+    rel="noopener noreferrer"
     className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
     style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
@@ -128,7 +130,7 @@ function Index() {
                     className="text-4xl md:text-5xl font-extrabold leading-tight"
                     style={{ color: "var(--orange-deep)" }}
                   >
-                    <span className="fonte-menor">2x de</span> R$ 10,47
+                    <span className="fonte-menor">3x de</span> R$ 9,64
                   </p>
                   <p className="mt-1 text-base text-[var(--muted-foreground)]">
                     ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
@@ -389,7 +391,7 @@ function Index() {
             <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">💰 INVESTIMENTO</p>
             <div className="mt-3">
               <p className="text-5xl md:text-6xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
-                <span className="fonte-menor">2x de</span> R$ 10,47
+                <span className="fonte-menor">3x de</span> R$ 9,64
               </p>
               <p className="mt-2 text-lg text-[var(--muted-foreground)]">
                 ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
