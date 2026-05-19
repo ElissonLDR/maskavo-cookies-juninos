@@ -227,7 +227,8 @@ function Index() {
       </section>
 
       {/* PARA QUEM É */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
+
         <div className="max-w-5xl mx-auto">
           <div
             className="premium-card p-8 md:p-14 grid md:grid-cols-[1fr_auto] gap-10 items-center"
