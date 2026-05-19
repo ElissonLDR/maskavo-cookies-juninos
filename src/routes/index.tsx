@@ -312,7 +312,7 @@ function Index() {
       </section>
 
       {/* ORDER BUMP */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="max-w-4xl mx-auto">
           <div
             className="p-8 md:p-12 relative overflow-hidden"
