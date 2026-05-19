@@ -149,7 +149,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">🎉 APRENDIZADO</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-extrabold">
-              O QUE VOCÊ VAI <span style={{ color: "var(--orange-deep)" }}>APRENDER</span>
+              O que você vai <span style={{ color: "var(--orange-deep)" }}>aprender</span>
             </h2>
             <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">
               Receitas temáticas para transformar o São João em oportunidade de venda:
