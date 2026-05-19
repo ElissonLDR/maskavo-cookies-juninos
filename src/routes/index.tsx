@@ -47,11 +47,9 @@ function Index() {
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-between">
-        <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10 brightness-0 invert opacity-90" />
-        <a href="#oferta" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white transition">
-          Garantir vaga →
-        </a>
+        <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10" />
       </header>
+
 
       {/* HERO */}
       <section
@@ -64,24 +62,25 @@ function Index() {
       >
         <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Texto */}
-          <div className="text-white">
+          <div className="text-[var(--brown-deep)]">
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
-            <h1 className="mt-6 font-extrabold leading-[0.95] text-white text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
+            <h1 className="mt-6 font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
               Cookies
               <br />
-              <span style={{ color: "var(--yellow-junina)" }}>Juninos</span>
+              <span style={{ color: "var(--orange-deep)" }}>Juninos</span>
             </h1>
 
-            <p className="mt-6 text-xl md:text-2xl font-semibold text-white max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-              Aprenda receitas <span style={{ color: "var(--yellow-junina)" }}>criativas e perfeitas</span> para vender no São João
+            <p className="mt-6 text-xl md:text-2xl font-semibold max-w-xl">
+              Aprenda receitas <span style={{ color: "var(--orange-deep)" }}>criativas e perfeitas</span> para vender no São João
             </p>
 
-            <p className="mt-4 text-base md:text-lg text-white font-light max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
+            <p className="mt-4 text-base md:text-lg font-light max-w-xl leading-relaxed text-[var(--brown-deep)]/85">
               Em apenas 2 dias de aulas ao vivo, você vai aprender cookies temáticos que chamam
-              atenção, despertam desejo e têm <strong className="font-semibold text-white">alto potencial de venda</strong> nessa época do ano.
+              atenção, despertam desejo e têm <strong className="font-semibold">alto potencial de venda</strong> nessa época do ano.
             </p>
           </div>
+
 
           {/* Imagem */}
           <div className="relative flex items-center justify-center order-last md:order-none">
@@ -107,43 +106,48 @@ function Index() {
           {/* Price box */}
           <div className="md:col-span-2 w-full flex justify-center">
             <div
-              className="bg-white text-[var(--brown-deep)] p-6 md:p-8 w-full max-w-2xl"
+              className="bg-white text-[var(--brown-deep)] p-6 md:p-8 w-full max-w-3xl"
               style={{ borderRadius: 32, boxShadow: "var(--shadow-card)" }}
             >
               <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brown)]">
                 💰 GARANTA SUA VAGA
               </div>
 
-              <ul className="mt-5 grid grid-cols-2 gap-3">
-                {[
-                  ["📅", "Dias 01 e 02 de junho"],
-                  ["🎥", "Conteúdo ao vivo"],
-                  ["📄", "Apostila completa inclusa"],
-                  ["⏳", "Gravação por 15 dias"],
-                ].map(([icon, text]) => (
-                  <li key={text} className="flex items-center gap-2 text-[var(--brown-deep)] text-sm md:text-base font-medium">
-                    <span className="text-lg md:text-xl">{icon}</span>
-                    <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-5 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
+                {/* Coluna esquerda: destaques */}
+                <ul className="grid gap-3">
+                  {[
+                    ["📅", "Dias 01 e 02 de junho"],
+                    ["🎥", "Conteúdo ao vivo"],
+                    ["📄", "Apostila completa inclusa"],
+                    ["⏳", "Gravação por 15 dias"],
+                  ].map(([icon, text]) => (
+                    <li key={text} className="flex items-center gap-3 text-[var(--brown-deep)] text-base font-medium">
+                      <span className="text-xl">{icon}</span>
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <div className="mt-6 pt-5 border-t border-[var(--border)] flex items-baseline gap-3 flex-wrap">
-                <span className="text-4xl md:text-5xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
-                  3x de R$9,64
-                </span>
-                <span className="text-base text-[var(--muted-foreground)]">
-                  ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
-                </span>
+                {/* Coluna direita: valores */}
+                <div className="md:border-l md:border-[var(--border)] md:pl-8">
+                  <p className="text-4xl md:text-5xl font-extrabold leading-tight" style={{ color: "var(--orange-deep)" }}>
+                    3x de R$9,64
+                  </p>
+                  <p className="mt-1 text-base text-[var(--muted-foreground)]">
+                    ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
+                  </p>
+                  <div className="mt-5">
+                    <CTA>Garantir meu acesso</CTA>
+                  </div>
+                  <p className="mt-3 text-xs text-[var(--muted-foreground)] text-center">
+                    🔒 Pagamento seguro • Acesso imediato
+                  </p>
+                </div>
               </div>
-              <div className="mt-5">
-                <CTA>Garantir meu acesso ao evento</CTA>
-              </div>
-              <p className="mt-3 text-xs text-[var(--muted-foreground)] text-center">
-                🔒 Pagamento seguro • Acesso imediato
-              </p>
             </div>
           </div>
+
         </div>
       </section>
 
