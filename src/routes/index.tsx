@@ -33,13 +33,13 @@ export const Route = createFileRoute("/")({
 const CTA = ({ children = "Garantir meu acesso ao evento", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
     href="#oferta"
-    className="btn-cta"
-    style={large ? { fontSize: "1.25rem", padding: "1.375rem 2.5rem" } : undefined}
+    className="btn-cta w-full text-center"
+    style={large ? { fontSize: "1.0625rem", padding: "1.25rem 1.5rem" } : { fontSize: "0.95rem", padding: "1rem 1.25rem" }}
   >
-    <span>👉</span>
     <span>{children}</span>
   </a>
 );
+
 
 function Index() {
   return (
