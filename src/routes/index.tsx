@@ -231,7 +231,7 @@ function Index() {
             <div>
               <span className="tag-chip">👩‍🍳 PÚBLICO</span>
               <h2 className="mt-5 text-3xl md:text-5xl font-extrabold leading-tight">
-                PARA QUEM É <span style={{ color: "var(--orange-deep)" }}>ESSE EVENTO</span>
+                Para quem é <span style={{ color: "var(--orange-deep)" }}>esse evento</span>
               </h2>
               <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">
                 Esse evento é para quem:
