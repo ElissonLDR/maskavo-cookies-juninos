@@ -56,7 +56,7 @@ function Index() {
       <section
         className="relative w-full min-h-[90vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(36,16,10,0.55), rgba(36,16,10,0.35)), url(${bgHero})`,
+          backgroundImage: `url(${bgHero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -67,9 +67,9 @@ function Index() {
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
             <h1 className="mt-6 font-extrabold leading-[0.95] text-white text-5xl sm:text-6xl md:text-7xl">
-              COOKIES
+              Cookies
               <br />
-              <span style={{ color: "var(--yellow-junina)" }}>JUNINOS</span>
+              <span style={{ color: "var(--yellow-junina)" }}>Juninos</span>
             </h1>
 
             <p className="mt-6 text-xl md:text-2xl font-semibold text-white max-w-xl">
@@ -134,10 +134,10 @@ function Index() {
               className="absolute -bottom-6 -right-2 w-28 float-anim z-10"
             />
             <img
-              src={cookiesDestaque}
+              src={cookiesCapa}
               alt="Cookies Juninos"
-              className="w-full max-w-lg blob-shape shadow-2xl"
-              style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.5)" }}
+              className="w-full max-w-lg"
+              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
         </div>
@@ -149,7 +149,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">🎉 APRENDIZADO</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-extrabold">
-              O QUE VOCÊ VAI <span style={{ color: "var(--orange-deep)" }}>APRENDER</span>
+              O que você vai <span style={{ color: "var(--orange-deep)" }}>aprender</span>
             </h2>
             <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">
               Receitas temáticas para transformar o São João em oportunidade de venda:
@@ -171,7 +171,7 @@ function Index() {
                   <img
                     src={c.img}
                     alt={c.title}
-                    className="w-full h-72 md:h-80 object-cover blob-shape-2 transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-7 md:p-8">
@@ -231,7 +231,7 @@ function Index() {
             <div>
               <span className="tag-chip">👩‍🍳 PÚBLICO</span>
               <h2 className="mt-5 text-3xl md:text-5xl font-extrabold leading-tight">
-                PARA QUEM É <span style={{ color: "var(--orange-deep)" }}>ESSE EVENTO</span>
+                Para quem é <span style={{ color: "var(--orange-deep)" }}>esse evento</span>
               </h2>
               <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">
                 Esse evento é para quem:
@@ -257,10 +257,10 @@ function Index() {
             </div>
             <div className="relative justify-self-center">
               <img
-                src={cookiesCapa}
+                src={cookiesDestaque}
                 alt="Flávia segurando cookies juninos"
-                className="w-64 md:w-72 blob-shape shadow-xl"
-                style={{ boxShadow: "var(--shadow-card)" }}
+                className="w-64 md:w-72"
+                style={{ filter: "drop-shadow(0 20px 40px rgba(36,16,10,0.25))" }}
               />
               <img src={emojiChapeu} alt="" className="absolute -top-8 -right-6 w-20 float-anim" />
             </div>
@@ -274,7 +274,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">📦 INCLUSO</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-extrabold">
-              O QUE VOCÊ <span style={{ color: "var(--orange-deep)" }}>RECEBE</span>
+              O que você <span style={{ color: "var(--orange-deep)" }}>recebe</span>
             </h2>
           </div>
 
