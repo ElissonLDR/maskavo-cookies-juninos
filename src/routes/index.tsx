@@ -134,10 +134,10 @@ function Index() {
               className="absolute -bottom-6 -right-2 w-28 float-anim z-10"
             />
             <img
-              src={cookiesDestaque}
+              src={cookiesCapa}
               alt="Cookies Juninos"
-              className="w-full max-w-lg blob-shape shadow-2xl"
-              style={{ boxShadow: "0 30px 60px -20px rgba(0,0,0,0.5)" }}
+              className="w-full max-w-lg"
+              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
         </div>
