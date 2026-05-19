@@ -48,7 +48,7 @@ function Index() {
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-center">
-        <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10 md:bg-transparent md:px-0 md:py-0 md:rounded-none md:backdrop-blur-none bg-white/70 px-4 py-2 rounded-full backdrop-blur-sm" />
+        <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-12 md:h-14 md:bg-transparent md:px-0 md:py-0 md:rounded-none md:backdrop-blur-none bg-white/70 px-5 py-2.5 rounded-full backdrop-blur-sm" />
       </header>
 
       {/* HERO */}
@@ -374,9 +374,9 @@ function Index() {
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-16 gap-10">
           {/* Texto esquerda */}
-          <div className="flex-1 text-center md:text-left">
+          <div className="flex-1 min-w-0 text-center md:text-left">
             <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap" style={{ fontSize: "clamp(1.5rem, 5.5vw, 3.75rem)" }}>
+            <h2 className="mt-5 font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap" style={{ fontSize: "clamp(1rem, 4.8vw, 3.75rem)" }}>
               Acesso completo ao <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
             </h2>
           </div>
