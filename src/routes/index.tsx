@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 
 const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
-    href="https://pay.hotmart.com/L105848987O?off=pincvacy"
+    href="https://pay.hotmart.com/L105848987O?off=pincvacy&checkoutMode=10"
     target="_blank"
     rel="noopener noreferrer"
     className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
