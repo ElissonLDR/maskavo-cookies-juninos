@@ -61,7 +61,7 @@ function Index() {
       >
         <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Texto */}
-          <div className="text-[var(--brown-deep)]">
+          <div className="text-[var(--brown-deep)] text-center md:text-left">
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
             <h1 className="mt-6 font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
@@ -70,19 +70,19 @@ function Index() {
               <span style={{ color: "var(--orange-deep)" }}>Juninos</span>
             </h1>
 
-            <p className="mt-6 text-xl md:text-2xl font-semibold max-w-xl">
+            <p className="mt-6 text-xl md:text-2xl font-semibold max-w-xl mx-auto md:mx-0">
               Aprenda receitas <span style={{ color: "var(--orange-deep)" }}>criativas e perfeitas</span> para vender no
               São João
             </p>
 
-            <p className="mt-4 text-base md:text-lg font-light max-w-xl leading-relaxed text-[var(--brown-deep)]/85">
+            <p className="mt-4 text-base md:text-lg font-light max-w-xl leading-relaxed text-[var(--brown-deep)]/85 mx-auto md:mx-0">
               Em apenas 2 dias de aulas ao vivo, você vai aprender cookies temáticos que chamam atenção, despertam
               desejo e têm <strong className="font-semibold">alto potencial de venda</strong> nessa época do ano.
             </p>
           </div>
 
-          {/* Imagem */}
-          <div className="relative flex items-center justify-center order-last md:order-none">
+          {/* Imagem — no mobile aparece após o texto (order-2), no desktop volta à posição original */}
+          <div className="relative flex items-center justify-center order-2 md:order-none">
             <img
               src={emojiBalao}
               alt=""
@@ -99,12 +99,12 @@ function Index() {
           </div>
 
           {/* Price box */}
-          <div className="md:col-span-2 w-full flex justify-center">
+          <div className="order-3 md:order-none md:col-span-2 w-full flex justify-center">
             <div
               className="bg-white text-[var(--brown-deep)] p-6 md:p-8 w-full max-w-3xl"
               style={{ borderRadius: 32, boxShadow: "var(--shadow-card)" }}
             >
-              <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brown)]">
+              <div className="flex items-center justify-center md:justify-start gap-2 text-sm font-semibold tracking-wider text-[var(--brown)]">
                 💰 GARANTA SUA VAGA
               </div>
 
@@ -117,7 +117,7 @@ function Index() {
                     ["📄", "Apostila completa inclusa"],
                     ["⏳", "Gravação por 15 dias"],
                   ].map(([icon, text]) => (
-                    <li key={text} className="flex items-center gap-3 text-[var(--brown-deep)] text-base font-medium">
+                    <li key={text} className="flex items-center justify-center md:justify-start gap-3 text-[var(--brown-deep)] text-base font-medium">
                       <span className="text-xl">{icon}</span>
                       <span>{text}</span>
                     </li>
@@ -125,15 +125,15 @@ function Index() {
                 </ul>
 
                 {/* Coluna direita: valores */}
-                <div className="md:border-l md:border-[var(--border)] md:pl-8">
+                <div className="text-center md:text-left md:border-l md:border-[var(--border)] md:pl-8">
                   <p
                     className="text-4xl md:text-5xl font-extrabold leading-tight"
                     style={{ color: "var(--orange-deep)" }}
                   >
-                    <span className="fonte-menor">3x de</span> R$ 9,64
+                    <span className="text-base font-semibold">3x de</span> R$ 9,64
                   </p>
-                  <p className="mt-1 text-base text-[var(--muted-foreground)]">
-                    ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
+                  <p className="mt-1 text-xl font-bold text-[var(--muted-foreground)]">
+                    ou <strong className="text-[var(--brown-deep)] font-bold">R$27,00</strong> à vista
                   </p>
                   <div className="mt-5">
                     <CTA>Garantir meu acesso</CTA>
@@ -182,8 +182,8 @@ function Index() {
                   <img src={c.img} alt={c.title} className="w-full h-auto object-contain" />
                 </div>
 
-                <div className="p-7 md:p-8">
-                  <div className="flex items-center gap-3">
+                <div className="p-7 md:p-8 text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-3">
                     <span className="text-4xl">{c.emoji}</span>
                     <h3 className="text-2xl md:text-3xl font-bold">{c.title}</h3>
                   </div>
@@ -202,7 +202,7 @@ function Index() {
               boxShadow: "var(--shadow-card)",
             }}
           >
-            <p className="text-white text-lg md:text-xl font-medium">Além disso, durante as aulas você vai aprender:</p>
+            <p className="text-white text-lg md:text-xl font-medium text-center md:text-left">Além disso, durante as aulas você vai aprender:</p>
             <ul className="mt-6 grid md:grid-cols-2 gap-4">
               {[
                 "Técnicas de produção",
@@ -210,7 +210,7 @@ function Index() {
                 "Finalização e apresentação",
                 "Estratégias para vender mais em datas sazonais",
               ].map((it) => (
-                <li key={it} className="flex items-start gap-3 text-white/95 text-base md:text-lg">
+                <li key={it} className="flex items-center justify-center md:justify-start gap-3 text-white/95 text-base md:text-lg">
                   <span
                     className="mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold flex-shrink-0"
                     style={{ background: "var(--yellow-junina)", color: "var(--brown-deep)" }}
@@ -232,7 +232,7 @@ function Index() {
             className="premium-card p-8 md:p-14 grid md:grid-cols-[1fr_auto] gap-10 items-center"
             style={{ borderRadius: 48 }}
           >
-            <div>
+            <div className="text-center md:text-left">
               <span className="tag-chip">👩‍🍳 PÚBLICO</span>
               <h2 className="mt-5 text-3xl md:text-5xl font-extrabold leading-tight">
                 Para quem é <span style={{ color: "var(--orange-deep)" }}>esse evento</span>
@@ -245,9 +245,9 @@ function Index() {
                   "Quer aprender receitas criativas e lucrativas",
                   "Quer vender cookies com mais valor percebido",
                 ].map((it) => (
-                  <li key={it} className="flex items-start gap-3">
+                  <li key={it} className="flex items-center justify-center md:justify-start gap-3">
                     <span
-                      className="mt-1 inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold flex-shrink-0"
+                      className="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold flex-shrink-0"
                       style={{ background: "#22c55e", color: "white" }}
                     >
                       ✓
@@ -287,9 +287,9 @@ function Index() {
               { icon: "🌽", title: "Receitas exclusivas", desc: "Criadas para o São João." },
               { icon: "⏳", title: "Gravação por 15 dias", desc: "Assista quando quiser, no seu ritmo." },
             ].map((c) => (
-              <div key={c.title} className="premium-card p-7" style={{ borderRadius: 32 }}>
+              <div key={c.title} className="premium-card p-7 text-center md:text-left" style={{ borderRadius: 32 }}>
                 <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4"
+                  className="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto md:mx-0"
                   style={{ background: "var(--cream)", border: "2px solid var(--yellow-junina)" }}
                 >
                   {c.icon}
@@ -316,7 +316,7 @@ function Index() {
           >
             <img src={emojiBalao} alt="" className="absolute -top-6 -right-6 w-32 opacity-90 float-anim" />
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center relative">
-              <div>
+              <div className="text-center md:text-left">
                 <span
                   className="inline-flex items-center gap-2 text-xs font-bold tracking-widest px-3 py-1.5 rounded-full"
                   style={{ background: "var(--yellow-junina)", color: "var(--brown-deep)" }}
@@ -335,7 +335,7 @@ function Index() {
                   , você garante:
                 </p>
                 <ul className="mt-5">
-                  <li className="flex items-center gap-3 text-white text-lg font-medium">
+                  <li className="flex items-center justify-center md:justify-start gap-3 text-white text-lg font-medium">
                     <span
                       className="inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold"
                       style={{ background: "var(--yellow-junina)", color: "var(--brown-deep)" }}
