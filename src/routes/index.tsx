@@ -67,9 +67,9 @@ function Index() {
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
             <h1 className="mt-6 font-extrabold leading-[0.95] text-white text-5xl sm:text-6xl md:text-7xl">
-              COOKIES
+              Cookies
               <br />
-              <span style={{ color: "var(--yellow-junina)" }}>JUNINOS</span>
+              <span style={{ color: "var(--yellow-junina)" }}>Juninos</span>
             </h1>
 
             <p className="mt-6 text-xl md:text-2xl font-semibold text-white max-w-xl">
