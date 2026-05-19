@@ -31,4 +31,4 @@ bun dev
 
 Projeto iniciado e desenvolvido no [Lovable](https://lovable.dev) por [@ElissonLDR](https://github.com/ElissonLDR). As imagens foram geradas com **ChatGPT** (DALL·E) e os ajustes finais de layout e responsividade foram feitos com **Claude Code**.
 
-Feito com carinho por [V4 Company](https://v4company.com) 🤝
+Feito com carinho por V4 Company Amaral 🤝
