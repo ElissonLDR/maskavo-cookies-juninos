@@ -90,7 +90,6 @@ function Index() {
               src={cookiesCapa}
               alt="Cookies Juninos"
               className="w-full max-w-xs md:max-w-lg"
-              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
 
