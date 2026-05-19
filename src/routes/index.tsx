@@ -376,31 +376,35 @@ function Index() {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="tag-chip">🌽 OFERTA FINAL</span>
-          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.6)]">
-            Acesso completo ao
-            <br />
-            <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
-          </h2>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:gap-16 gap-10">
+          {/* Texto esquerda */}
+          <div className="flex-1 text-center md:text-left">
+            <span className="tag-chip">🌽 OFERTA FINAL</span>
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight">
+              Acesso completo ao
+              <br />
+              <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
+            </h2>
+          </div>
 
+          {/* Box de valores direita */}
           <div
-            className="mt-10 mx-auto p-8 md:p-10 max-w-xl bg-white"
+            className="w-full md:w-auto md:flex-shrink-0 md:max-w-sm p-8 md:p-10 bg-white"
             style={{ borderRadius: 40, boxShadow: "0 30px 60px -15px rgba(0,0,0,0.4)" }}
           >
             <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">💰 INVESTIMENTO</p>
             <div className="mt-3">
               <p className="text-5xl md:text-6xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
-                <span className="fonte-menor">3x de</span> R$ 9,64
+                <span className="text-base font-semibold">3x de</span> R$ 9,64
               </p>
-              <p className="mt-2 text-lg text-[var(--muted-foreground)]">
-                ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
+              <p className="mt-2 text-xl font-bold text-[var(--muted-foreground)]">
+                ou <strong className="text-[var(--brown-deep)] font-bold">R$27,00</strong> à vista
               </p>
             </div>
             <div className="mt-7">
               <CTA large>Garantir meu acesso ao evento</CTA>
             </div>
-            <p className="mt-4 text-sm text-[var(--muted-foreground)]">🔒 Pagamento seguro • Acesso imediato</p>
+            <p className="mt-4 text-sm text-[var(--muted-foreground)] text-center">🔒 Pagamento seguro • Acesso imediato</p>
           </div>
         </div>
       </section>
