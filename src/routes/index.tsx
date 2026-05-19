@@ -275,7 +275,8 @@ function Index() {
       </section>
 
       {/* O QUE VOCÊ RECEBE */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
+
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">📦 INCLUSO</span>
