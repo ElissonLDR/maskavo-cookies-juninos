@@ -257,10 +257,10 @@ function Index() {
             </div>
             <div className="relative justify-self-center">
               <img
-                src={cookiesCapa}
+                src={cookiesDestaque}
                 alt="Flávia segurando cookies juninos"
-                className="w-64 md:w-72 blob-shape shadow-xl"
-                style={{ boxShadow: "var(--shadow-card)" }}
+                className="w-64 md:w-72"
+                style={{ filter: "drop-shadow(0 20px 40px rgba(36,16,10,0.25))" }}
               />
               <img src={emojiChapeu} alt="" className="absolute -top-8 -right-6 w-20 float-anim" />
             </div>
