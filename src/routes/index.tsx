@@ -274,7 +274,7 @@ function Index() {
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">📦 INCLUSO</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-extrabold">
-              O QUE VOCÊ <span style={{ color: "var(--orange-deep)" }}>RECEBE</span>
+              O que você <span style={{ color: "var(--orange-deep)" }}>recebe</span>
             </h2>
           </div>
 
