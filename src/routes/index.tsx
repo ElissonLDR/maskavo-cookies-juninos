@@ -64,10 +64,8 @@ function Index() {
           <div className="text-[var(--brown-deep)] text-center md:text-left">
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
-            <h1 className="mt-6 font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl">
-              Cookies
-              <br />
-              <span style={{ color: "var(--orange-deep)" }}>Juninos</span>
+            <h1 className="mt-6 font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl whitespace-nowrap">
+              Cookies <span style={{ color: "var(--orange-deep)" }}>Juninos</span>
             </h1>
 
             <p className="mt-6 text-xl md:text-2xl font-semibold max-w-xl mx-auto md:mx-0">
@@ -380,10 +378,8 @@ function Index() {
           {/* Texto esquerda */}
           <div className="flex-1 text-center md:text-left">
             <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight">
-              Acesso completo ao
-              <br />
-              <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight whitespace-nowrap">
+              Acesso completo ao <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
             </h2>
           </div>
 
