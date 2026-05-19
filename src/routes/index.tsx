@@ -30,9 +30,13 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const CHECKOUT_URL = "https://pay.hotmart.com/X105849308I?off=czlb22s9";
+
 const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
-    href="#oferta"
+    href={CHECKOUT_URL}
+    target="_blank"
+    rel="noopener noreferrer"
     className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
     style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
@@ -46,7 +50,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-between">
+      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-center">
         <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10" />
       </header>
 
@@ -99,7 +103,6 @@ function Index() {
               src={cookiesCapa}
               alt="Cookies Juninos"
               className="w-full max-w-xs md:max-w-lg"
-              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
 
@@ -394,17 +397,18 @@ function Index() {
         }}
       >
 
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="tag-chip">🌽 OFERTA FINAL</span>
-          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.6)]">
-            Acesso completo ao
-            <br />
-            <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
-          </h2>
-
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+          <div className="text-left">
+            <span className="tag-chip">🌽 OFERTA FINAL</span>
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight">
+              Acesso completo ao
+              <br />
+              <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
+            </h2>
+          </div>
 
           <div
-            className="mt-10 mx-auto p-8 md:p-10 max-w-xl bg-white"
+            className="p-8 md:p-10 bg-white w-full"
             style={{ borderRadius: 40, boxShadow: "0 30px 60px -15px rgba(0,0,0,0.4)" }}
           >
             <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">
