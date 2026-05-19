@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Cookies Juninos" },
+      { name: "description", content: "Landing page for Flavia Maskavo's Junino Cookies, featuring festive elements and gourmet design." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Cookies Juninos" },
+      { property: "og:description", content: "Landing page for Flavia Maskavo's Junino Cookies, featuring festive elements and gourmet design." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Cookies Juninos" },
+      { name: "twitter:description", content: "Landing page for Flavia Maskavo's Junino Cookies, featuring festive elements and gourmet design." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/fopNpQrRLYce3OG5UaKgyCWZWf12/social-images/social-1779203786267-Redes_sociais.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/fopNpQrRLYce3OG5UaKgyCWZWf12/social-images/social-1779203786267-Redes_sociais.webp" },
     ],
     links: [
       {
