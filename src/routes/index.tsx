@@ -400,10 +400,10 @@ function Index() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <div className="text-left">
             <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight">
+            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight">
               Acesso completo ao
               <br />
-              <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
+              <span style={{ color: "var(--orange-deep)" }}>Cookies Juninos</span>
             </h2>
           </div>
 
