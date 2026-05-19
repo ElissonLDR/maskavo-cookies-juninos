@@ -148,7 +148,7 @@ function Index() {
 
 
       {/* O QUE VOCÊ VAI APRENDER */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-14 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">🎉 APRENDIZADO</span>
