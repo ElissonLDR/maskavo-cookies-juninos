@@ -30,16 +30,17 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CTA = ({ children = "Garantir meu acesso ao evento", large = false }: { children?: React.ReactNode; large?: boolean }) => (
+const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
     href="#oferta"
-    className="btn-cta"
-    style={large ? { fontSize: "1.25rem", padding: "1.375rem 2.5rem" } : undefined}
+    className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
+    style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
-    <span>👉</span>
     <span>{children}</span>
   </a>
 );
+
+
 
 function Index() {
   return (
@@ -61,56 +62,80 @@ function Index() {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Texto */}
           <div className="text-white">
             <span className="tag-chip">📅 EVENTO AO VIVO • SÃO JOÃO</span>
 
-            <h1 className="mt-6 font-extrabold leading-[0.95] text-white text-5xl sm:text-6xl md:text-7xl">
+            <h1 className="mt-6 font-extrabold leading-[0.95] text-white text-5xl sm:text-6xl md:text-7xl drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
               Cookies
               <br />
               <span style={{ color: "var(--yellow-junina)" }}>Juninos</span>
             </h1>
 
-            <p className="mt-6 text-xl md:text-2xl font-semibold text-white max-w-xl">
+            <p className="mt-6 text-xl md:text-2xl font-semibold text-white max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               Aprenda receitas <span style={{ color: "var(--yellow-junina)" }}>criativas e perfeitas</span> para vender no São João
             </p>
 
-            <p className="mt-4 text-base md:text-lg text-white/85 font-light max-w-xl leading-relaxed">
+            <p className="mt-4 text-base md:text-lg text-white font-light max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)]">
               Em apenas 2 dias de aulas ao vivo, você vai aprender cookies temáticos que chamam
               atenção, despertam desejo e têm <strong className="font-semibold text-white">alto potencial de venda</strong> nessa época do ano.
             </p>
+          </div>
 
-            <ul className="mt-6 grid sm:grid-cols-2 gap-3 max-w-xl">
-              {[
-                ["📅", "Dias 01 e 02 de junho"],
-                ["🎥", "Conteúdo ao vivo"],
-                ["📄", "Apostila completa inclusa"],
-                ["⏳", "Gravação por 15 dias"],
-              ].map(([icon, text]) => (
-                <li key={text} className="flex items-center gap-3 text-white/95 text-base font-medium">
-                  <span className="text-xl">{icon}</span>
-                  {text}
-                </li>
-              ))}
-            </ul>
+          {/* Imagem */}
+          <div className="relative flex items-center justify-center order-last md:order-none">
+            <img
+              src={emojiBalao}
+              alt=""
+              className="absolute -top-6 -left-2 w-16 md:w-24 float-anim z-10"
+              style={{ animationDelay: "0.5s" }}
+            />
+            <img
+              src={emojiChapeu}
+              alt=""
+              className="absolute -bottom-4 -right-2 w-20 md:w-28 float-anim z-10"
+            />
+            <img
+              src={cookiesCapa}
+              alt="Cookies Juninos"
+              className="w-full max-w-xs md:max-w-lg"
+              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
+            />
+          </div>
 
-            {/* Price box */}
+          {/* Price box */}
+          <div className="md:col-span-2 w-full flex justify-center">
             <div
-              className="mt-8 bg-white text-[var(--brown-deep)] p-6 md:p-7 max-w-md"
+              className="bg-white text-[var(--brown-deep)] p-6 md:p-8 w-full max-w-2xl"
               style={{ borderRadius: 32, boxShadow: "var(--shadow-card)" }}
             >
               <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[var(--brown)]">
                 💰 GARANTA SUA VAGA
               </div>
-              <div className="mt-3 flex items-baseline gap-3 flex-wrap">
+
+              <ul className="mt-5 grid grid-cols-2 gap-3">
+                {[
+                  ["📅", "Dias 01 e 02 de junho"],
+                  ["🎥", "Conteúdo ao vivo"],
+                  ["📄", "Apostila completa inclusa"],
+                  ["⏳", "Gravação por 15 dias"],
+                ].map(([icon, text]) => (
+                  <li key={text} className="flex items-center gap-2 text-[var(--brown-deep)] text-sm md:text-base font-medium">
+                    <span className="text-lg md:text-xl">{icon}</span>
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 pt-5 border-t border-[var(--border)] flex items-baseline gap-3 flex-wrap">
                 <span className="text-4xl md:text-5xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
                   3x de R$9,64
                 </span>
+                <span className="text-base text-[var(--muted-foreground)]">
+                  ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
+                </span>
               </div>
-              <p className="text-base text-[var(--muted-foreground)] mt-1">
-                ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
-              </p>
               <div className="mt-5">
                 <CTA>Garantir meu acesso ao evento</CTA>
               </div>
@@ -119,32 +144,12 @@ function Index() {
               </p>
             </div>
           </div>
-
-          {/* Imagem */}
-          <div className="relative hidden md:flex items-center justify-center">
-            <img
-              src={emojiBalao}
-              alt=""
-              className="absolute -top-8 -left-4 w-24 float-anim z-10"
-              style={{ animationDelay: "0.5s" }}
-            />
-            <img
-              src={emojiChapeu}
-              alt=""
-              className="absolute -bottom-6 -right-2 w-28 float-anim z-10"
-            />
-            <img
-              src={cookiesCapa}
-              alt="Cookies Juninos"
-              className="w-full max-w-lg"
-              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
-            />
-          </div>
         </div>
       </section>
 
+
       {/* O QUE VOCÊ VAI APRENDER */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="py-14 md:py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">🎉 APRENDIZADO</span>
@@ -164,16 +169,17 @@ function Index() {
             ].map((c) => (
               <article
                 key={c.title}
-                className="premium-card overflow-hidden group transition-all duration-500 hover:-translate-y-2"
+                className="premium-card overflow-hidden"
                 style={{ borderRadius: 40 }}
               >
-                <div className="relative p-6 pb-0">
+                <div className="p-6 pb-0">
                   <img
                     src={c.img}
                     alt={c.title}
-                    className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="flex items-center gap-3">
                     <span className="text-4xl">{c.emoji}</span>
@@ -222,7 +228,8 @@ function Index() {
       </section>
 
       {/* PARA QUEM É */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
+
         <div className="max-w-5xl mx-auto">
           <div
             className="premium-card p-8 md:p-14 grid md:grid-cols-[1fr_auto] gap-10 items-center"
@@ -269,7 +276,8 @@ function Index() {
       </section>
 
       {/* O QUE VOCÊ RECEBE */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
+
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">📦 INCLUSO</span>
@@ -287,7 +295,7 @@ function Index() {
             ].map((c) => (
               <div
                 key={c.title}
-                className="premium-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
+                className="premium-card p-7"
                 style={{ borderRadius: 32 }}
               >
                 <div
@@ -305,7 +313,7 @@ function Index() {
       </section>
 
       {/* ORDER BUMP */}
-      <section className="py-16 md:py-24 px-6">
+      <section className="py-10 md:py-14 px-6">
         <div className="max-w-4xl mx-auto">
           <div
             className="p-8 md:p-12 relative overflow-hidden"
@@ -374,20 +382,22 @@ function Index() {
       {/* OFERTA FINAL */}
       <section
         id="oferta"
-        className="relative py-24 md:py-32 px-6 mt-8"
+        className="relative py-16 md:py-24 px-6"
         style={{
-          backgroundImage: `linear-gradient(rgba(36,16,10,0.55), rgba(36,16,10,0.55)), url(${bgFinal})`,
+          backgroundImage: `url(${bgFinal})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
+
         <div className="max-w-3xl mx-auto text-center">
           <span className="tag-chip">🌽 OFERTA FINAL</span>
-          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.6)]">
             Acesso completo ao
             <br />
             <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
           </h2>
+
 
           <div
             className="mt-10 mx-auto p-8 md:p-10 max-w-xl bg-white"
