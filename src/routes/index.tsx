@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import bgHero from "@/assets/bg-hero.webp";
+import bgHeroMobile from "@/assets/bg-hero-mobile.webp";
 import bgFinal from "@/assets/bg-final.webp";
 import emojiBalao from "@/assets/emoji-balao.png";
 import emojiChapeu from "@/assets/emoji-chapeu.png";
@@ -51,14 +52,11 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section
-        className="relative w-full min-h-[90vh] flex items-center"
-        style={{
-          backgroundImage: `url(${bgHero})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative w-full min-h-[90vh] flex items-center">
+        {/* background desktop */}
+        <div className="absolute inset-0 hidden md:block" style={{ backgroundImage: `url(${bgHero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        {/* background mobile */}
+        <div className="absolute inset-0 block md:hidden" style={{ backgroundImage: `url(${bgHeroMobile})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="max-w-7xl mx-auto w-full px-6 pt-28 pb-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Texto */}
           <div className="text-[var(--brown-deep)] text-center md:text-left">
