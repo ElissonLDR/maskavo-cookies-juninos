@@ -89,15 +89,15 @@ function Index() {
           {/* Imagem */}
           <div className="relative flex items-center justify-center order-last md:order-none">
             <img
-              src={emojiBalao}
+              src={emojiChapeu}
               alt=""
-              className="absolute -top-6 -left-2 w-16 md:w-24 float-anim z-10"
+              className="absolute -top-6 -left-2 w-20 md:w-28 float-anim z-10"
               style={{ animationDelay: "0.5s" }}
             />
             <img
-              src={emojiChapeu}
+              src={emojiBalao}
               alt=""
-              className="absolute -bottom-4 -right-2 w-20 md:w-28 float-anim z-10"
+              className="absolute -bottom-4 -right-2 w-16 md:w-24 float-anim z-10"
             />
             <img
               src={cookiesCapa}
