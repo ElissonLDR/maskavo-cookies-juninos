@@ -30,9 +30,13 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const CHECKOUT_URL = "https://pay.hotmart.com/X105849308I?off=czlb22s9";
+
 const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
-    href="#oferta"
+    href={CHECKOUT_URL}
+    target="_blank"
+    rel="noopener noreferrer"
     className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
     style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
@@ -46,7 +50,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-between">
+      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-center">
         <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10" />
       </header>
 
@@ -99,7 +103,6 @@ function Index() {
               src={cookiesCapa}
               alt="Cookies Juninos"
               className="w-full max-w-xs md:max-w-lg"
-              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
 
