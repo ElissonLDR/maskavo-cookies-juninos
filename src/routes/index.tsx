@@ -168,16 +168,17 @@ function Index() {
             ].map((c) => (
               <article
                 key={c.title}
-                className="premium-card overflow-hidden group transition-all duration-500 hover:-translate-y-2"
+                className="premium-card overflow-hidden"
                 style={{ borderRadius: 40 }}
               >
-                <div className="relative p-6 pb-0">
+                <div className="p-6 pb-0">
                   <img
                     src={c.img}
                     alt={c.title}
-                    className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="flex items-center gap-3">
                     <span className="text-4xl">{c.emoji}</span>
