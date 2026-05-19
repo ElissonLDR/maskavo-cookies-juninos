@@ -128,7 +128,7 @@ function Index() {
                     className="text-4xl md:text-5xl font-extrabold leading-tight"
                     style={{ color: "var(--orange-deep)" }}
                   >
-                    <span class="fonte-menor">2x de</span> R$ 10,47
+                    <span className="fonte-menor">2x de</span> R$ 10,47
                   </p>
                   <p className="mt-1 text-base text-[var(--muted-foreground)]">
                     ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
@@ -389,7 +389,7 @@ function Index() {
             <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">💰 INVESTIMENTO</p>
             <div className="mt-3">
               <p className="text-5xl md:text-6xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
-                <span class="fonte-menor">2x de</span> R$ 10,47
+                <span className="fonte-menor">2x de</span> R$ 10,47
               </p>
               <p className="mt-2 text-lg text-[var(--muted-foreground)]">
                 ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
