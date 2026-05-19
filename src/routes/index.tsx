@@ -30,13 +30,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CHECKOUT_URL = "https://pay.hotmart.com/X105849308I?off=czlb22s9";
-
 const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: React.ReactNode; large?: boolean }) => (
   <a
-    href={CHECKOUT_URL}
-    target="_blank"
-    rel="noopener noreferrer"
+    href="#oferta"
     className={`btn-cta w-full text-center whitespace-nowrap ${large ? "text-base sm:text-lg" : "text-sm sm:text-base"}`}
     style={{ padding: large ? "1.125rem 1rem" : "1rem 1rem" }}
   >
@@ -44,16 +40,13 @@ const CTA = ({ children = "Garantir meu acesso", large = false }: { children?: R
   </a>
 );
 
-
-
 function Index() {
   return (
     <main className="min-h-screen bg-[var(--cream)] text-[var(--brown-deep)] overflow-x-hidden">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-center">
+      <header className="absolute top-0 left-0 right-0 z-30 px-6 py-5 flex items-center justify-between">
         <img src={logoMaskavo} alt="Comunidade Maskavo" className="h-8 md:h-10" />
       </header>
-
 
       {/* HERO */}
       <section
@@ -76,33 +69,30 @@ function Index() {
             </h1>
 
             <p className="mt-6 text-xl md:text-2xl font-semibold max-w-xl">
-              Aprenda receitas <span style={{ color: "var(--orange-deep)" }}>criativas e perfeitas</span> para vender no São João
+              Aprenda receitas <span style={{ color: "var(--orange-deep)" }}>criativas e perfeitas</span> para vender no
+              São João
             </p>
 
             <p className="mt-4 text-base md:text-lg font-light max-w-xl leading-relaxed text-[var(--brown-deep)]/85">
-              Em apenas 2 dias de aulas ao vivo, você vai aprender cookies temáticos que chamam
-              atenção, despertam desejo e têm <strong className="font-semibold">alto potencial de venda</strong> nessa época do ano.
+              Em apenas 2 dias de aulas ao vivo, você vai aprender cookies temáticos que chamam atenção, despertam
+              desejo e têm <strong className="font-semibold">alto potencial de venda</strong> nessa época do ano.
             </p>
           </div>
-
 
           {/* Imagem */}
           <div className="relative flex items-center justify-center order-last md:order-none">
             <img
-              src={emojiChapeu}
-              alt=""
-              className="absolute -top-6 -left-2 w-20 md:w-28 float-anim z-10"
-              style={{ animationDelay: "0.5s" }}
-            />
-            <img
               src={emojiBalao}
               alt=""
-              className="absolute -bottom-4 -right-2 w-16 md:w-24 float-anim z-10"
+              className="absolute -top-6 -left-2 w-16 md:w-24 float-anim z-10"
+              style={{ animationDelay: "0.5s" }}
             />
+            <img src={emojiChapeu} alt="" className="absolute -bottom-4 -right-2 w-20 md:w-28 float-anim z-10" />
             <img
               src={cookiesCapa}
               alt="Cookies Juninos"
               className="w-full max-w-xs md:max-w-lg"
+              style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.45))" }}
             />
           </div>
 
@@ -134,8 +124,11 @@ function Index() {
 
                 {/* Coluna direita: valores */}
                 <div className="md:border-l md:border-[var(--border)] md:pl-8">
-                  <p className="text-4xl md:text-5xl font-extrabold leading-tight" style={{ color: "var(--orange-deep)" }}>
-                    3x de R$9,64
+                  <p
+                    className="text-4xl md:text-5xl font-extrabold leading-tight"
+                    style={{ color: "var(--orange-deep)" }}
+                  >
+                    <span class="fonte-menor">2x de</span> R$ 10,47
                   </p>
                   <p className="mt-1 text-base text-[var(--muted-foreground)]">
                     ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
@@ -150,10 +143,8 @@ function Index() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
-
 
       {/* O QUE VOCÊ VAI APRENDER */}
       <section className="py-14 md:py-20 px-6">
@@ -171,20 +162,22 @@ function Index() {
           {/* Cards das receitas */}
           <div className="mt-14 grid md:grid-cols-2 gap-8">
             {[
-              { img: cookieMaca, emoji: "🍎", title: "Cookie Maçã do Amor", desc: "Recheio cremoso, casquinha vermelha brilhante — a cara do arraial em formato de cookie." },
-              { img: cookiePamonha, emoji: "🌽", title: "Cookie Pamonha", desc: "O sabor mais querido do São João numa massa macia, cheia de pedacinhos generosos." },
+              {
+                img: cookieMaca,
+                emoji: "🍎",
+                title: "Cookie Maçã do Amor",
+                desc: "Recheio cremoso, casquinha vermelha brilhante — a cara do arraial em formato de cookie.",
+              },
+              {
+                img: cookiePamonha,
+                emoji: "🌽",
+                title: "Cookie Pamonha",
+                desc: "O sabor mais querido do São João numa massa macia, cheia de pedacinhos generosos.",
+              },
             ].map((c) => (
-              <article
-                key={c.title}
-                className="premium-card overflow-hidden"
-                style={{ borderRadius: 40 }}
-              >
+              <article key={c.title} className="premium-card overflow-hidden" style={{ borderRadius: 40 }}>
                 <div className="p-6 pb-0">
-                  <img
-                    src={c.img}
-                    alt={c.title}
-                    className="w-full h-auto object-contain"
-                  />
+                  <img src={c.img} alt={c.title} className="w-full h-auto object-contain" />
                 </div>
 
                 <div className="p-7 md:p-8">
@@ -192,9 +185,7 @@ function Index() {
                     <span className="text-4xl">{c.emoji}</span>
                     <h3 className="text-2xl md:text-3xl font-bold">{c.title}</h3>
                   </div>
-                  <p className="mt-3 text-[var(--muted-foreground)] text-base leading-relaxed font-light">
-                    {c.desc}
-                  </p>
+                  <p className="mt-3 text-[var(--muted-foreground)] text-base leading-relaxed font-light">{c.desc}</p>
                 </div>
               </article>
             ))}
@@ -209,9 +200,7 @@ function Index() {
               boxShadow: "var(--shadow-card)",
             }}
           >
-            <p className="text-white text-lg md:text-xl font-medium">
-              Além disso, durante as aulas você vai aprender:
-            </p>
+            <p className="text-white text-lg md:text-xl font-medium">Além disso, durante as aulas você vai aprender:</p>
             <ul className="mt-6 grid md:grid-cols-2 gap-4">
               {[
                 "Técnicas de produção",
@@ -236,7 +225,6 @@ function Index() {
 
       {/* PARA QUEM É */}
       <section className="py-10 md:py-14 px-6">
-
         <div className="max-w-5xl mx-auto">
           <div
             className="premium-card p-8 md:p-14 grid md:grid-cols-[1fr_auto] gap-10 items-center"
@@ -247,9 +235,7 @@ function Index() {
               <h2 className="mt-5 text-3xl md:text-5xl font-extrabold leading-tight">
                 Para quem é <span style={{ color: "var(--orange-deep)" }}>esse evento</span>
               </h2>
-              <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">
-                Esse evento é para quem:
-              </p>
+              <p className="mt-4 text-lg text-[var(--muted-foreground)] font-light">Esse evento é para quem:</p>
               <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
                 {[
                   "Quer aproveitar o potencial de vendas do São João",
@@ -284,7 +270,6 @@ function Index() {
 
       {/* O QUE VOCÊ RECEBE */}
       <section className="py-10 md:py-14 px-6">
-
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <span className="tag-chip">📦 INCLUSO</span>
@@ -300,11 +285,7 @@ function Index() {
               { icon: "🌽", title: "Receitas exclusivas", desc: "Criadas para o São João." },
               { icon: "⏳", title: "Gravação por 15 dias", desc: "Assista quando quiser, no seu ritmo." },
             ].map((c) => (
-              <div
-                key={c.title}
-                className="premium-card p-7"
-                style={{ borderRadius: 32 }}
-              >
+              <div key={c.title} className="premium-card p-7" style={{ borderRadius: 32 }}>
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-4"
                   style={{ background: "var(--cream)", border: "2px solid var(--yellow-junina)" }}
@@ -331,11 +312,7 @@ function Index() {
               boxShadow: "0 30px 60px -20px rgba(36,16,10,0.4)",
             }}
           >
-            <img
-              src={emojiBalao}
-              alt=""
-              className="absolute -top-6 -right-6 w-32 opacity-90 float-anim"
-            />
+            <img src={emojiBalao} alt="" className="absolute -top-6 -right-6 w-32 opacity-90 float-anim" />
             <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center relative">
               <div>
                 <span
@@ -345,7 +322,8 @@ function Index() {
                   🔓 ACESSO ESTENDIDO
                 </span>
                 <h2 className="mt-5 text-3xl md:text-4xl font-extrabold text-white leading-tight">
-                  Quer assistir com calma e <span style={{ color: "var(--yellow-junina)" }}>rever as aulas</span> quando quiser?
+                  Quer assistir com calma e <span style={{ color: "var(--yellow-junina)" }}>rever as aulas</span> quando
+                  quiser?
                 </h2>
                 <p className="mt-4 text-white/80 text-lg font-light">
                   Por apenas{" "}
@@ -396,27 +374,22 @@ function Index() {
           backgroundPosition: "center",
         }}
       >
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-center">
-          <div className="text-left">
-            <span className="tag-chip">🌽 OFERTA FINAL</span>
-            <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-[var(--brown-deep)] leading-tight">
-              Acesso completo ao
-              <br />
-              <span style={{ color: "var(--orange-deep)" }}>Cookies Juninos</span>
-            </h2>
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="tag-chip">🌽 OFERTA FINAL</span>
+          <h2 className="mt-5 text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_4px_18px_rgba(0,0,0,0.6)]">
+            Acesso completo ao
+            <br />
+            <span style={{ color: "var(--yellow-junina)" }}>Cookies Juninos</span>
+          </h2>
 
           <div
-            className="p-8 md:p-10 bg-white w-full"
+            className="mt-10 mx-auto p-8 md:p-10 max-w-xl bg-white"
             style={{ borderRadius: 40, boxShadow: "0 30px 60px -15px rgba(0,0,0,0.4)" }}
           >
-            <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">
-              💰 INVESTIMENTO
-            </p>
+            <p className="text-sm font-semibold tracking-widest text-[var(--brown)]">💰 INVESTIMENTO</p>
             <div className="mt-3">
               <p className="text-5xl md:text-6xl font-extrabold" style={{ color: "var(--orange-deep)" }}>
-                3x de R$9,64
+                <span class="fonte-menor">2x de</span> R$ 10,47
               </p>
               <p className="mt-2 text-lg text-[var(--muted-foreground)]">
                 ou <strong className="text-[var(--brown-deep)] font-semibold">R$27,00</strong> à vista
@@ -425,9 +398,7 @@ function Index() {
             <div className="mt-7">
               <CTA large>Garantir meu acesso ao evento</CTA>
             </div>
-            <p className="mt-4 text-sm text-[var(--muted-foreground)]">
-              🔒 Pagamento seguro • Acesso imediato
-            </p>
+            <p className="mt-4 text-sm text-[var(--muted-foreground)]">🔒 Pagamento seguro • Acesso imediato</p>
           </div>
         </div>
       </section>
