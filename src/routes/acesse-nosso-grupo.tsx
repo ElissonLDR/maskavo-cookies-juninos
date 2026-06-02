@@ -6,7 +6,7 @@ import emojiChapeu from "@/assets/emoji-chapeu.png";
 import cookiesCapa from "@/assets/cookies-capa.webp";
 import logoMaskavo from "@/assets/logo-maskavo.svg";
 
-export const Route = createFileRoute("/whatsapp")({
+export const Route = createFileRoute("/acesse-nosso-grupo")({
   head: () => ({
     meta: [
       { title: "Acesse o Grupo — Cookies Juninos | Flávia Maskavo" },
