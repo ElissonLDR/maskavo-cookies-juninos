@@ -9,12 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WhatsappRouteImport } from './routes/whatsapp'
+import { Route as AcesseNossoGrupoRouteImport } from './routes/acesse-nosso-grupo'
 import { Route as IndexRouteImport } from './routes/index'
 
-const WhatsappRoute = WhatsappRouteImport.update({
-  id: '/whatsapp',
-  path: '/whatsapp',
+const AcesseNossoGrupoRoute = AcesseNossoGrupoRouteImport.update({
+  id: '/acesse-nosso-grupo',
+  path: '/acesse-nosso-grupo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +25,37 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/whatsapp': typeof WhatsappRoute
+  '/acesse-nosso-grupo': typeof AcesseNossoGrupoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/whatsapp': typeof WhatsappRoute
+  '/acesse-nosso-grupo': typeof AcesseNossoGrupoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/whatsapp': typeof WhatsappRoute
+  '/acesse-nosso-grupo': typeof AcesseNossoGrupoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/whatsapp'
+  fullPaths: '/' | '/acesse-nosso-grupo'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/whatsapp'
-  id: '__root__' | '/' | '/whatsapp'
+  to: '/' | '/acesse-nosso-grupo'
+  id: '__root__' | '/' | '/acesse-nosso-grupo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  WhatsappRoute: typeof WhatsappRoute
+  AcesseNossoGrupoRoute: typeof AcesseNossoGrupoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/whatsapp': {
-      id: '/whatsapp'
-      path: '/whatsapp'
-      fullPath: '/whatsapp'
-      preLoaderRoute: typeof WhatsappRouteImport
+    '/acesse-nosso-grupo': {
+      id: '/acesse-nosso-grupo'
+      path: '/acesse-nosso-grupo'
+      fullPath: '/acesse-nosso-grupo'
+      preLoaderRoute: typeof AcesseNossoGrupoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,8 +70,18 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  WhatsappRoute: WhatsappRoute,
+  AcesseNossoGrupoRoute: AcesseNossoGrupoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
